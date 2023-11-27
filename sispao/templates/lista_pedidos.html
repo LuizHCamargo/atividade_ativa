@@ -4,7 +4,7 @@
 <a class="btn btn-success" href="{% url 'novo_pedido' %}">Novo pedido</a>
 <ul>
     {% for pedido in pedidos %}
-        <li>{{ pedido.data_pedido }} - R$ {{ pedido.valor_total }}</li>
+        <li>{{ pedido.data_pedido }} - R$ {{ pedido.valor_total }} - Data de entrega: {{ pedido.data_entrega|default:"Ainda não entregue" }}</li>
     {% endfor %}
 </ul>
 

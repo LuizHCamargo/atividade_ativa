@@ -1,7 +1,5 @@
-from django.forms import ModelForm, ModelChoiceField, IntegerField, modelformset_factory
-from django.core.exceptions import ValidationError
+from django.forms import ModelForm, ModelChoiceField
 from .models import Cliente, PedidoProdutos, Produto
-import datetime
 
 class ClienteForm(ModelForm):
     class Meta:
