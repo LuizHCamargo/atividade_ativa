@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Novo pedido</h2>
+<form method="post">
+    {% csrf_token %}
+    {% for produto in produtos %}
+      <div>
+        <label for="quantidade_{{ produto.id }}">{{ produto.descricao }} (R$ {{ produto.preco }})</label>
+        <input type="number" name="quantidade_{{ produto.id }}" id="quantidade_{{ produto.id }}" min="0">
+      </div>
+    {% endfor %}
+    <button type="submit">Enviar pedido</button>
+  </form>
+
+{% endblock %}

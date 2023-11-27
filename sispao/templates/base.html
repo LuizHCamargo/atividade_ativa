@@ -1,0 +1,24 @@
+{% load static %}<!-- código Python para carregar arquivos estáticos -->
+<html>
+    <head>
+        <title>SisPao</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+        <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css' />
+        
+    </head>
+    <body>
+        <div class="page-header">
+            <h1><a href="/">SisPao</a></h1>
+        </div>
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                    {% block content %}
+                    {% endblock %}
+                    <!-- conteúdo do formulário e das demais páginas que utilizam o mesmo arquivo base por meio de código Python -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
